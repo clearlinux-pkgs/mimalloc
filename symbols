@@ -24,8 +24,10 @@ libmimalloc.so.3:mi_aligned_offset_recalloc
 libmimalloc.so.3:mi_aligned_recalloc
 libmimalloc.so.3:mi_arena_area
 libmimalloc.so.3:mi_arena_contains
+libmimalloc.so.3:mi_arena_min_alignment
 libmimalloc.so.3:mi_arena_reload
 libmimalloc.so.3:mi_arena_unload
+libmimalloc.so.3:mi_arenas_print
 libmimalloc.so.3:mi_calloc
 libmimalloc.so.3:mi_calloc_aligned
 libmimalloc.so.3:mi_calloc_aligned_at
@@ -76,6 +78,7 @@ libmimalloc.so.3:mi_heap_rezalloc
 libmimalloc.so.3:mi_heap_rezalloc_aligned
 libmimalloc.so.3:mi_heap_rezalloc_aligned_at
 libmimalloc.so.3:mi_heap_set_default
+libmimalloc.so.3:mi_heap_set_numa_affinity
 libmimalloc.so.3:mi_heap_strdup
 libmimalloc.so.3:mi_heap_strndup
 libmimalloc.so.3:mi_heap_try_new
@@ -85,6 +88,7 @@ libmimalloc.so.3:mi_heap_zalloc
 libmimalloc.so.3:mi_heap_zalloc_aligned
 libmimalloc.so.3:mi_heap_zalloc_aligned_at
 libmimalloc.so.3:mi_is_in_heap_region
+libmimalloc.so.3:mi_is_redirected
 libmimalloc.so.3:mi_malloc
 libmimalloc.so.3:mi_malloc_aligned
 libmimalloc.so.3:mi_malloc_aligned_at
@@ -93,6 +97,7 @@ libmimalloc.so.3:mi_malloc_size
 libmimalloc.so.3:mi_malloc_small
 libmimalloc.so.3:mi_malloc_usable_size
 libmimalloc.so.3:mi_mallocn
+libmimalloc.so.3:mi_manage_memory
 libmimalloc.so.3:mi_manage_os_memory
 libmimalloc.so.3:mi_manage_os_memory_ex
 libmimalloc.so.3:mi_mbsdup
@@ -114,6 +119,7 @@ libmimalloc.so.3:mi_option_set
 libmimalloc.so.3:mi_option_set_default
 libmimalloc.so.3:mi_option_set_enabled
 libmimalloc.so.3:mi_option_set_enabled_default
+libmimalloc.so.3:mi_options_print
 libmimalloc.so.3:mi_posix_memalign
 libmimalloc.so.3:mi_process_info
 libmimalloc.so.3:mi_process_init
@@ -141,6 +147,9 @@ libmimalloc.so.3:mi_reserve_os_memory_ex
 libmimalloc.so.3:mi_rezalloc
 libmimalloc.so.3:mi_rezalloc_aligned
 libmimalloc.so.3:mi_rezalloc_aligned_at
+libmimalloc.so.3:mi_stats_get
+libmimalloc.so.3:mi_stats_get_bin_size
+libmimalloc.so.3:mi_stats_get_json
 libmimalloc.so.3:mi_stats_merge
 libmimalloc.so.3:mi_stats_print
 libmimalloc.so.3:mi_stats_print_out
@@ -153,6 +162,7 @@ libmimalloc.so.3:mi_subproc_main
 libmimalloc.so.3:mi_subproc_new
 libmimalloc.so.3:mi_thread_done
 libmimalloc.so.3:mi_thread_init
+libmimalloc.so.3:mi_thread_set_in_threadpool
 libmimalloc.so.3:mi_thread_stats_print_out
 libmimalloc.so.3:mi_usable_size
 libmimalloc.so.3:mi_valloc
