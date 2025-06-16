@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : mimalloc
-Version  : 3.1.4
-Release  : 4
-URL      : https://github.com/microsoft/mimalloc/archive/v3.1.4/mimalloc-3.1.4.tar.gz
-Source0  : https://github.com/microsoft/mimalloc/archive/v3.1.4/mimalloc-3.1.4.tar.gz
+Version  : 3.1.5
+Release  : 5
+URL      : https://github.com/microsoft/mimalloc/archive/v3.1.5/mimalloc-3.1.5.tar.gz
+Source0  : https://github.com/microsoft/mimalloc/archive/v3.1.5/mimalloc-3.1.5.tar.gz
 Summary  : A compact general purpose allocator with excellent performance
 Group    : Development/Tools
 License  : MIT
@@ -54,15 +54,15 @@ license components for the mimalloc package.
 
 
 %prep
-%setup -q -n mimalloc-3.1.4
-cd %{_builddir}/mimalloc-3.1.4
+%setup -q -n mimalloc-3.1.5
+cd %{_builddir}/mimalloc-3.1.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1749569702
+export SOURCE_DATE_EPOCH=1750088584
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -106,7 +106,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1749569702
+export SOURCE_DATE_EPOCH=1750088584
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/mimalloc
 cp %{_builddir}/mimalloc-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/mimalloc/9fc329b1edc4ff9f1b5cd9473e006f231c72daba || :
